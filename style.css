@@ -6,6 +6,143 @@
   box-sizing: border-box;
   scroll-padding-top: 1rem;
   scroll-behavior: smooth;
-  color: gainsboro;
+  color: #161616;
 }
 
+body {
+  background-color: #f5f5f7;
+  min-height: 100%;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #fbfb90;
+  height: 100dvh;
+  width: 20rem;
+  position: fixed;
+  gap: 1.8rem;
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+#navbar header {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  overflow-y: auto;
+  font-size: 16.7px;
+  font-weight: bold;
+  gap: 1.2rem;
+  padding: 5px;
+}
+
+.container li,
+.nav-link {
+  display: inline-block;
+  width: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #161616c6;
+  border-radius: 10px;
+}
+
+#Menu,
+.active,
+.not-active {
+  display: none;
+}
+
+.active,
+.not-active {
+  display: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+@media (width <= 768px) {
+  #navbar {
+    width: 100%;
+    height: 7.5rem;
+    gap: 1rem;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  .active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .active span {
+    font-size: 1.1rem;
+  }
+
+  .container {
+    position: absolute;
+    background-color: inherit;
+    width: 100%;
+    top: -30rem;
+    height: 65vh;
+    text-align: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    gap: 2rem;
+    z-index: -10;
+    transition: 1s ease;
+  }
+  .container li {
+    font-size: 0px;
+  }
+
+  #Menu:checked ~ .active {
+    display: none;
+  }
+
+  #Menu:checked ~ .not-active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  #Menu:checked ~ .not-active span {
+    transform: rotate(90deg);
+  }
+
+  #Menu:checked ~ .container {
+    top: 6.5rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    transition: 1s ease;
+  }
+
+  #Menu:checked ~ .container li {
+    display: block;
+    font-size: 18px;
+    transition: 1s ease-out;
+  }
+}
