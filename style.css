@@ -26,6 +26,8 @@ body {
   gap: 1.8rem;
   z-index: 999;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  border-top-right-radius: 35px;
+  border-bottom-right-radius: 35px;
 }
 
 #navbar header {
@@ -74,6 +76,65 @@ body {
   display: none;
   width: 100%;
   cursor: pointer;
+}
+
+.main-section {
+  padding: 1rem 8rem 1rem 23rem;
+  /* border: solid red 2px; */
+}
+
+#Introduction {
+  padding-top: 4rem;
+}
+
+.main-section header {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.main-section p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 1rem 0;
+}
+
+.main-section ul p {
+  margin: 0;
+}
+
+.main-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 3.5rem;
+}
+
+.main-section ul ul {
+    margin-top: 1rem;
+}
+
+.main-section a span {
+    color: #d7c35b;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre-line;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #161616;
+  color: white;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+code span {
+    color: white;
+    margin-left: 1rem;
 }
 
 @media (width <= 768px) {
