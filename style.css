@@ -79,8 +79,7 @@ body {
 }
 
 .main-section {
-  padding: 1rem 8rem 1rem 23rem;
-  /* border: solid red 2px; */
+  padding: 1rem 6rem 1rem 23rem;
 }
 
 #Introduction {
@@ -140,10 +139,12 @@ code span {
 @media (width <= 768px) {
   #navbar {
     width: 100%;
-    height: 7.5rem;
-    gap: 1rem;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
+    height: 6rem;
+    padding: 1rem 0 0 0;
+    gap: .5rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 
   .active {
@@ -164,13 +165,13 @@ code span {
     background-color: inherit;
     width: 100%;
     top: -30rem;
-    height: 65vh;
+    height: 40vh;
     text-align: center;
-    padding-top: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
-    gap: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    gap: 1.5rem;
     z-index: -10;
     transition: 1s ease;
   }
@@ -196,7 +197,7 @@ code span {
   }
 
   #Menu:checked ~ .container {
-    top: 6.5rem;
+    top: 5.3rem;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
     transition: 1s ease;
   }
@@ -205,5 +206,17 @@ code span {
     display: block;
     font-size: 18px;
     transition: 1s ease-out;
+  }
+
+  .main-section {
+    padding: 6rem 1.5rem 1rem;
+  }
+
+  #Introduction {
+    padding-top: 7.5rem;
+  }
+
+  #Reference {
+    padding: 2rem 1rem 4rem;
   }
 }

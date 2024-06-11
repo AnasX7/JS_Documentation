@@ -23,8 +23,8 @@
 				<li><a class="nav-link" href="#Global_variables">Global variables</a></li>
 				<li><a class="nav-link" href="#Constants">Constants</a></li>
 				<li><a class="nav-link" href="#Data_types">Data types</a></li>
-				<li><a class="nav-link" href="#if...else_statemaent">if...else statemaent</a></li>
-				<li><a class="nav-link" href="#while_statement">while statemaent</a></li>
+				<li><a class="nav-link" href="#if...else_statement">if...else statement</a></li>
+				<li><a class="nav-link" href="#while_statement">while statement</a></li>
 				<li><a class="nav-link" href="#Function_declarations">Function declarations</a></li>
 				<li><a class="nav-link" href="#Reference">Reference</a></li>
 			</ul>
@@ -185,7 +185,7 @@
 			</section>
 
 			<section class="main-section" id="Variable_scope">
-				<header>Variable_scope</header>
+				<header>Variable scope</header>
 				<p>
 					When you declare a variable outside of any function, it is called
 					a global variable, because it is available to any other code in
@@ -315,8 +315,8 @@
 				</p>
 			</section>
 
-			<section class="main-section" id="if...else_statemaent">
-				<header>if...else statemaent</header>
+			<section class="main-section" id="if...else_statement">
+				<header>if...else statement</header>
 				<p>
 					Use the if statement to execute a statement if a logical condition
 					is true. Use the optional else clause to execute a statement if
@@ -480,6 +480,14 @@
 			</section>
 
 		</main>
+
+		<script>
+			const links = document.querySelectorAll('.nav-link');
+			links.forEach((e) => {
+				e.addEventListener('click', () => {
+					document.querySelector('#Menu').checked = false;
+				});
+			});
+		</script>
   </body>
 </html>
-            
